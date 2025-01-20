@@ -31,11 +31,23 @@ export default async function CityPage({
   const fileContents = fs.readFileSync(filePath, "utf8");
   const goldPrices: GoldPrices = JSON.parse(fileContents);
 
-  // Get the city from params
-  const city = "india"
+  // Hardcode city as 'india' to fetch gold prices for India
+  const city = "india";
 
-  // Default to India price if the city is not in the data
-  const data = goldPrices[city] ;
+  // Ensure that India data exists, fallback to default if not found
+  const data = goldPrices[city] || {
+    date: "Default Date",
+    rates: {
+      "18k": 4700,
+      "22k": 5200,
+      "24k": 5800,
+    },
+    ratesYesterday: {
+      "18k": 4600,
+      "22k": 5100,
+      "24k": 5700,
+    },
+  };
 
   // Sample gold price table data
   const goldPriceData = (karat: "18k" | "22k" | "24k") => [
@@ -44,6 +56,7 @@ export default async function CityPage({
     { gram: 10, today: data.rates[karat] * 10, yesterday: data.ratesYesterday[karat] * 10 },
     { gram: 100, today: data.rates[karat] * 100, yesterday: data.ratesYesterday[karat] * 100 },
   ];
+
   return (
     <>
       <div className={styles.container}>
