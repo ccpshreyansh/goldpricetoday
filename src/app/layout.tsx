@@ -30,10 +30,7 @@ export default function RootLayout({
     <html lang="en">
       <Head>
         {/* Google site verification meta tag */}
-        <meta
-          name="google-site-verification"
-          content="3qsrGtPqv-1-uvKAVdqpB83kKTpXsmCjaveRDIAMX4U"
-        />
+        <meta name="google-site-verification" content="y_LnWeCrexR3FQRtlteL9D5MDZSKjDKVv2ef1VIt9Z8" />
         <link rel="canonical" href="https://goldpricetoday.vercel.app" />
       </Head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
