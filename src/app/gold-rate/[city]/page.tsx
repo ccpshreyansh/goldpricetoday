@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
+// src/app/gold-rate/[city]/page.tsx
 import fs from "fs";
 import path from "path";
 import PriceCard from "@/components/PriceCard";
@@ -27,9 +27,7 @@ interface PageProps {
   };
 }
 
-export default async function CityPage({
-  params,
-}: PageProps) {
+export default async function CityPage({ params }: PageProps) {
   const { city } = params;
 
   // Path to the JSON file
@@ -80,7 +78,6 @@ export default async function CityPage({
         </div>
 
         <p className={styles.description}>
-          <br />
           The price of gold in {normalizedCity.charAt(0).toUpperCase() + normalizedCity.slice(1)} today is ₹
           {data.rates["22k"]} per gram for 22 karat gold and ₹{data.rates["24k"]} per gram for 24 karat gold. Updated on {data.date}.
         </p>
