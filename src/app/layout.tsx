@@ -1,4 +1,3 @@
-// src/app/layout.tsx
 import { Geist, Geist_Mono } from "next/font/google";
 import { Metadata } from "next";
 import "./globals.css";
@@ -18,7 +17,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Gold Price India - Track Today's Gold Rates",
-  description: "Stay updated with the latest gold prices in various cities across India. View 18k, 22k, and 24k gold rates.",
+  description:
+    "Stay updated with the latest gold prices in various cities across India. View 18k, 22k, and 24k gold rates.",
 };
 
 export default function RootLayout({
@@ -29,7 +29,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Head>
-        <link rel="canonical" href="https://yourwebsite.com" />
+        {/* Google site verification meta tag */}
+        <meta
+          name="google-site-verification"
+          content="3qsrGtPqv-1-uvKAVdqpB83kKTpXsmCjaveRDIAMX4U"
+        />
+        <link rel="canonical" href="https://goldpricetoday.vercel.app" />
       </Head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <header aria-label="Main Header">
