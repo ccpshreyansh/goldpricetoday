@@ -19,6 +19,10 @@ export const metadata: Metadata = {
   title: "Gold Price India - Track Today's Gold Rates",
   description:
     "Stay updated with the latest gold prices in various cities across India. View 18k, 22k, and 24k gold rates.",
+    verification: {
+      google: 'y_LnWeCrexR3FQRtlteL9D5MDZSKjDKVv2ef1VIt9Z8',
+      
+    }
 };
 
 export default function RootLayout({
