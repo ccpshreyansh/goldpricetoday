@@ -1,5 +1,5 @@
 /* Wrap global styles in :global */
-:global(body) {
+/* :global(body) {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: var(--background-color);
@@ -9,7 +9,7 @@
 :global(a) {
   text-decoration: none;
   color: inherit;
-}
+} */
 
 /* Local styles for the page */
 .container {
