@@ -84,9 +84,9 @@ export default async function CityPage() {
       </div>
 
       {/* Gold Price Tables */}
-      <GoldPriceTable data={goldPriceData("18k")} karat="18k" city="India" />
-      <GoldPriceTable data={goldPriceData("22k")} karat="22k" city="India" />
-      <GoldPriceTable data={goldPriceData("24k")} karat="24k" city="India" />
+      <GoldPriceTable data={goldPriceData("18k")} karat="18k" city="Bhutan" />
+      <GoldPriceTable data={goldPriceData("22k")} karat="22k" city="Bhutan" />
+      <GoldPriceTable data={goldPriceData("24k")} karat="24k" city="Bhutan" />
       <GoldPrice10days />
     </>
   );
