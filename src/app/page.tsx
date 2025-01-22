@@ -44,13 +44,13 @@ export default async function CityPage() {
     { gram: 100, today: indiaData.rates[karat] * 100, yesterday: indiaData.ratesYesterday[karat] * 100 },
   ];
 
+
   return (
     <>
       <div className={styles.container}>
         {/* Page Title */}
-        <h1>
-          <span style={{ color: "#e0b963" }}>{indiaData.title}</span>
-        </h1>
+        <h1><span style={{ color: "#e0b963" }}>Gold Prices </span><span> </span> 
+            in  India    </h1>
         <h2 className={styles.dates}>{indiaData.date}</h2>
 
         {/* Price Cards */}
@@ -62,6 +62,7 @@ export default async function CityPage() {
 
         {/* Description */}
         <p className={styles.description}>
+          <br></br>
           {indiaData.description} The price of gold in India today is ₹ {indiaData.rates["22k"]} per gram for 22 karat gold and ₹ {indiaData.rates["24k"]} per gram for 24 karat gold (also called 999 gold). Updated on {indiaData.date}.
         </p>
       </div>

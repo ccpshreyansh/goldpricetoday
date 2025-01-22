@@ -5,9 +5,10 @@
   align-items: center;
   justify-content: space-between; /* Distribute items: left, center, right */
   background-color: #313030; /* Gold color */
-  border-radius: 12px;
+  border-radius: 24px;
   padding: 10px 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 4px 4px;
 }
 
 .icon {
@@ -22,7 +23,7 @@
 }
 
 .title {
-  font-size: 16px;
+  font-size: 12px;
   font-weight: bold;
   color: #e0b963;
   text-align: center;

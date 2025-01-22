@@ -24,8 +24,8 @@ export default function ThemeToggle() {
     <button
       onClick={toggleTheme}
       style={{
-        padding: "10px",
-        fontSize: "16px",
+        padding: "8px",
+        fontSize: "12px",
         borderRadius: "50%",
         border: "none",
 
@@ -36,9 +36,9 @@ export default function ThemeToggle() {
       }}
     >
       {theme === "light" ? (
-        <MoonIcon style={{ width: "24px", height: "24px" }} />
+        <MoonIcon style={{ width: "20px", height: "20px" }} />
       ) : (
-        <SunIcon style={{ width: "24px", height: "24px" }} />
+        <SunIcon style={{ width: "20px", height: "20px" }} />
       )}
     </button>
   );
