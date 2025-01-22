@@ -1,11 +1,17 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import fs from "fs";
 import path from "path";
+import { Metadata } from "next";
 import PriceCard from "@/components/PriceCard";
-import styles from "./page.module.css";
+import styles from "../page.module.css";
 import GoldPriceTable from "@/components/GoldPriceTable";
 import GoldPrice10days from "@/components/GoldPrice10days";
+import Head from "next/head";
 
+export const metadata: Metadata = {
+    title: "Bhutan Gold Price - Today's Rates",
+    description: "Get the latest gold price in Bhutan for 18k, 22k, and 24k gold. Updated daily.",
+  };
 // Define the structure of the goldPrices data
 type GoldRates = {
   "18k": number;
@@ -14,7 +20,7 @@ type GoldRates = {
 };
 
 type GoldPrices = {
-  india: {
+  bhutan: {
     title: string;
     description: string;
     date: string;
@@ -30,32 +36,42 @@ export default async function CityPage() {
   const goldPrices: GoldPrices = JSON.parse(fileContents);
 
   // Fetch only the data for India
-  const indiaData = goldPrices.india;
+  const bhutanData = goldPrices.bhutan;
 
-  if (!indiaData) {
+  if (!bhutanData) {
     throw new Error("India data is missing or undefined");
   }
 
   // Sample gold price table data
   const goldPriceData = (karat: "18k" | "22k" | "24k") => [
-    { gram: 1, today: indiaData.rates[karat], yesterday: indiaData.ratesYesterday[karat] },
-    { gram: 8, today: indiaData.rates[karat] * 8, yesterday: indiaData.ratesYesterday[karat] * 8 },
-    { gram: 10, today: indiaData.rates[karat] * 10, yesterday: indiaData.ratesYesterday[karat] * 10 },
-    { gram: 100, today: indiaData.rates[karat] * 100, yesterday: indiaData.ratesYesterday[karat] * 100 },
+    { gram: 1, today: bhutanData.rates[karat], yesterday: bhutanData.ratesYesterday[karat] },
+    { gram: 8, today: bhutanData.rates[karat] * 8, yesterday: bhutanData.ratesYesterday[karat] * 8 },
+    { gram: 10, today: bhutanData.rates[karat] * 10, yesterday: bhutanData.ratesYesterday[karat] * 10 },
+    { gram: 100, today: bhutanData.rates[karat] * 100, yesterday: bhutanData.ratesYesterday[karat] * 100 },
   ];
-  const currentDate = new Date().toLocaleDateString();
 
+
+    const currentDate = new Date().toLocaleDateString();
   return (
     <>
+     <Head>
+        <title>Bhutan Gold Price - {bhutanData.title}</title>
+        <meta name="description" content={bhutanData.description} />
+        <meta property="og:title" content={`Gold Prices in Bhutan - ${bhutanData.title}`} />
+        <meta property="og:description" content={bhutanData.description} />
+        <meta property="og:url" content={`https://goldpricetoday.vercel.app/bhutan-gold-price`} />
+        <meta property="og:image" content="" />
+        {/* You can customize the Open Graph image URL */}
+      </Head>
       <div className={styles.container}>
         {/* Page Title */}
         <h1><span style={{ color: "#e0b963" }}>Gold Prices </span><span> </span> 
-            in  India    </h1>
+            in  Bhutan    </h1>
         <h2 className={styles.dates}>{currentDate}</h2>
 
         {/* Price Cards */}
         <div className={styles.grid}>
-          {Object.entries(indiaData.rates).map(([karat, price]) => (
+          {Object.entries(bhutanData.rates).map(([karat, price]) => (
             <PriceCard key={karat} karat={karat} price={price} />
           ))}
         </div>
@@ -63,7 +79,7 @@ export default async function CityPage() {
         {/* Description */}
         <p className={styles.description}>
           <br></br>
-          {indiaData.description} The price of gold in India today is ₹ {indiaData.rates["22k"]} per gram for 22 karat gold and ₹ {indiaData.rates["24k"]} per gram for 24 karat gold (also called 999 gold). Updated on {indiaData.date}.
+          {bhutanData.description} The price of gold in Bhutan today is ₹ {bhutanData.rates["22k"]} per gram for 22 karat gold and ₹ {bhutanData.rates["24k"]} per gram for 24 karat gold (also called 999 gold). Updated on {bhutanData.date}.
         </p>
       </div>
 

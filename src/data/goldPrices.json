@@ -2,7 +2,7 @@
   "india": {
     "title": "Gold Prices in India - Live Rates for 18k, 22k, and 24k Gold",
     "description": "Check the latest gold prices in India for 18k, 22k, and 24k gold. Stay updated with accurate and reliable rates.",
-    "date": "21 Jan 2025",
+    "date": "22 Jan 2025",
     "rates": {
       "18k": 6100,
       "22k": 7530,
@@ -14,10 +14,10 @@
       "24k": 8123
     }
   },
-  "delhi": {
-    "title": "Gold Prices in Delhi - Today's Live Updates",
-    "description": "Get the latest gold prices in Delhi for 18k, 22k, and 24k gold. Accurate rates updated daily.",
-    "date": "20 Jan 2025",
+  "bhutan": {
+    "title": "Gold Prices in Bhutan - Today's Live Updates",
+    "description": "Get the latest gold prices in Bhutan for 18k, 22k, and 24k gold. Accurate rates updated daily.",
+    "date": "22 Jan 2025",
     "rates": {
       "18k": 6250,
       "22k": 7600,
@@ -27,66 +27,6 @@
       "18k": 6300,
       "22k": 7650,
       "24k": 8300
-    }
-  },
-  "mumbai": {
-    "title": "Gold Prices in Mumbai - Today's Gold Rate",
-    "description": "Find today's gold rates in Mumbai for 18k, 22k, and 24k gold. Check live updates daily.",
-    "date": "20 Jan 2025",
-    "rates": {
-      "18k": 6300,
-      "22k": 7650,
-      "24k": 8300
-    },
-    "ratesYesterday": {
-      "18k": 6350,
-      "22k": 7700,
-      "24k": 8350
-    }
-  },
-  "bangalore": {
-    "title": "Gold Prices in Bangalore - 18k, 22k, 24k Rates",
-    "description": "Check live gold prices in Bangalore. Find rates for 18k, 22k, and 24k gold updated daily.",
-    "date": "20 Jan 2025",
-    "rates": {
-      "18k": 6220,
-      "22k": 7550,
-      "24k": 8150
-    },
-    "ratesYesterday": {
-      "18k": 6200,
-      "22k": 7520,
-      "24k": 8120
-    }
-  },
-  "kolkata": {
-    "title": "Gold Prices in Kolkata - Today's Rates",
-    "description": "Get the latest gold prices in Kolkata for 18k, 22k, and 24k gold. Updated daily with reliable information.",
-    "date": "20 Jan 2025",
-    "rates": {
-      "18k": 6210,
-      "22k": 7520,
-      "24k": 8120
-    },
-    "ratesYesterday": {
-      "18k": 6200,
-      "22k": 7500,
-      "24k": 8100
-    }
-  },
-  "lucknow": {
-    "title": "Gold Prices in Lucknow - Live Gold Rates",
-    "description": "Check today's gold prices in Lucknow for 18k, 22k, and 24k gold. Stay updated with accurate rates.",
-    "date": "20 Jan 2025",
-    "rates": {
-      "18k": 6230,
-      "22k": 7560,
-      "24k": 8180
-    },
-    "ratesYesterday": {
-      "18k": 6200,
-      "22k": 7550,
-      "24k": 8150
     }
   }
 }

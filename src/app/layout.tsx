@@ -1,6 +1,6 @@
+// src/app/layout.tsx
 import { Geist, Geist_Mono } from "next/font/google";
 import { Metadata } from "next";
-import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Head from "next/head";
@@ -19,10 +19,9 @@ export const metadata: Metadata = {
   title: "Gold Price India - Track Today's Gold Rates",
   description:
     "Stay updated with the latest gold prices in various cities across India. View 18k, 22k, and 24k gold rates.",
-    verification: {
-      google: 'y_LnWeCrexR3FQRtlteL9D5MDZSKjDKVv2ef1VIt9Z8',
-      
-    }
+  verification: {
+    google: 'y_LnWeCrexR3FQRtlteL9D5MDZSKjDKVv2ef1VIt9Z8',
+  },
 };
 
 export default function RootLayout({
